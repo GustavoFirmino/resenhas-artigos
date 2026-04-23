@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Resenha Cr\'itica: Artigo 14 ---\\
+Architectural Styles and the Design of Network-based\\
+Software Architectures (Fielding, 2000)}
+\author{Gustavo Pessoa Firmino Duarte}
+\date{23 de Abril de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introdu\c{c}\~ao}
+
+A disserta\c{c}\~ao de doutorado de Roy T. Fielding, defendida em 2000 na
+Universidade da Calif\'ornia em Irvine, \'e um dos documentos mais influentes da
+hist\'oria da arquitetura de software para sistemas distribu\'idos. Nela, Fielding
+define e justifica o estilo arquitetural \textit{Representational State Transfer}
+(REST), que se tornaria a base arquitetural da \textit{World Wide Web} e, nas
+d\'ecadas seguintes, o modelo dominante para o design de APIs na ind\'ustria de
+software. O trabalho n\~ao \'e apenas uma proposta t\'ecnica: \'e uma metodologia
+para \textit{avaliar} estilos arquiteturais atrav\'es de suas propriedades e
+trade-offs, usando um rigoroso framework de an\'alise que aplica e combina
+restri\c{c}\~oes arquiteturais para derivar propriedades de sistema.
+
+\section{REST: Restri\c{c}\~oes e Propriedades Derivadas}
+
+Fielding define REST como um conjunto de seis restri\c{c}\~oes arquiteturais,
+cada uma adicionando propriedades ao sistema e potencialmente removendo outras.
+
+A restri\c{c}\~ao \textbf{cliente-servidor} separa as preocupa\c{c}\~oes de
+interface do usu\'ario das preocupa\c{c}\~oes de armazenamento de dados, melhorando
+a portabilidade e a escalabilidade. A restri\c{c}\~ao \textbf{sem estado}
+(\textit{stateless}) exige que cada requisi\c{c}\~ao contenha toda a informa\c{c}\~ao
+necess\'aria para ser compreendida --- o servidor n\~ao mant\'em sess\~ao entre
+requisi\c{c}\~oes. Isso melhora a visibilidade, a confiabilidade e a escalabilidade,
+mas aumenta o volume de dados enviados por requisi\c{c}\~ao.
+
+A restri\c{c}\~ao de \textbf{cache} permite que respostas sejam marcadas como
+cacheáveis ou n\~ao, melhorando a efici\^encia e a escalabilidade. A restri\c{c}\~ao
+de \textbf{interface uniforme} --- a mais central e distintiva do REST --- simplifica
+a arquitetura geral e melhora a visibilidade das intera\c{c}\~oes ao custo de
+reduzir a efici\^encia para casos de uso espec\'ificos. Ela se desdobra em quatro
+subrestri\c{c}\~oes: identifica\c{c}\~ao de recursos via URIs, manipula\c{c}\~ao
+de recursos atrav\'es de representa\c{c}\~oes, mensagens autodescritivas e
+\textit{HATEOAS} (hiperm\'idia como motor do estado da aplica\c{c}\~ao).
+
+As restri\c{c}\~oes de \textbf{sistema em camadas} e \textbf{c\'odigo sob demanda}
+(opcional) completam o conjunto, permitindo, respectivamente, a interposi\c{c}\~ao
+de intermediários transparentes e a transfer\^encia de l\'ogica client-side como
+JavaScript.
+
+\section{Conex\~ao com a Pr\'atica Profissional}
+
+A API do meu MVP de e-commerce seguia REST de forma superficial: usava HTTP,
+verbos GET/POST/PUT/DELETE e URLs baseadas em recursos (\texttt{/products},
+\texttt{/orders}). Mas ao ler Fielding, percebi que a restri\c{c}\~ao mais ignorada
+foi o \textit{HATEOAS}: a API n\~ao retornava links para as transi\c{c}\~oes de
+estado poss\'iveis, exigindo que o cliente conhecesse de antem\~ao toda a estrutura
+da API. Fielding argumenta que \'e exatamente o HATEOAS que permite a evolu\c{c}\~ao
+do servidor sem quebrar clientes existentes --- uma propriedade que, reconhe\c{c}o,
+teria sido valiosa caso o projeto tivesse evolu\'ido al\'em do MVP.
+
+A restri\c{c}\~ao de aus\^encia de estado tamb\'em me fez refletir sobre a
+gest\~ao de sess\~oes de usu\'ario: implementei autentica\c{c}\~ao via JWT
+armazenado no cliente, o que \'e RESTful no sentido de que o servidor n\~ao guarda
+estado de sess\~ao --- mas havia detalhes de implementa\c{c}\~ao que criavam
+depend\^encias impl\'icitas de estado no servidor que violavam essa restri\c{c}\~ao.
+
+Na ArcelorMittal, as integra\c{c}\~oes entre sistemas utilizavam desde APIs REST
+modernas at\'e Web Services SOAP legados. A clareza do framework de Fielding \'e
+instru\'ivel para avaliar os trade-offs de cada abordagem.
+
+\section{Conclus\~ao}
+
+A disserta\c{c}\~ao de Fielding \'e muito mais do que a defini\c{c}\~ao do REST:
+\'e um exemplo exemplar de como avaliar e justificar escolhas arquiteturais atrav\'es
+de um framework sistem\'atico de restri\c{c}\~oes e propriedades derivadas. O
+REST tornou-se onipresente na ind\'ustria, mas frequentemente de forma superficial,
+ignorando restri\c{c}\~oes fundamentais como o \textit{HATEOAS}. A leitura original
+de Fielding \'e ess\'encial para compreender n\~ao apenas \textit{o que} \'e REST,
+mas \textit{por que} cada restri\c{c}\~ao existe e quais propriedades ela garante
+--- um entendimento que permite avaliar cr\'iticamente as escolhas arquiteturais
+em qualquer projeto de API.
+
+\end{document}

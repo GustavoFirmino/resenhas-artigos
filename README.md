@@ -60,24 +60,24 @@ As resenhas foram produzidas ao longo do semestre letivo de **2026/1**, cobrindo
 
 ## 📄 Artigos e Resenhas
 
-| # | Artigo | Autor(es) | Data da Resenha | Arquivo |
-|:-:|--------|-----------|:---------------:|---------|
-| 1 | The Big Ball of Mud | Foote & Yoder | 01/03/2026 | [PDF](Artigo_1_Big_Ball_of_Mud.pdf) |
-| 2 | On the Criteria to Be Used in Decomposing Systems into Modules | David L. Parnas | 08/03/2026 | [PDF](Artigo_2_Criteria_Modularization.pdf) · [TEX](Artigo_2_Criteria_Modularization.tex) |
-| 3 | No Silver Bullet — Essence and Accidents of Software Engineering | Frederick P. Brooks Jr. | 15/03/2026 | [PDF](Artigo_3_No_Silver_Bullet.pdf) |
-| 4 | Design by Contract | Bertrand Meyer | 22/03/2026 | [PDF](Artigo_4_Design_by_Contract.pdf) · [TEX](Artigo_4_Design_by_Contract.tex) |
-| 5 | Software Architecture: A Roadmap | David Garlan | 29/03/2026 | [PDF](Artigo_5_Software_Architecture_Roadmap.pdf) · [TEX](Artigo_5_Software_Architecture_Roadmap.tex) |
-| 6 | The Reactive Manifesto 2.0 | Bonér, Farley, Kuhn, Thompson | 05/04/2026 | [PDF](Artigo_6_Reactive_Manifesto.pdf) · [TEX](Artigo_6_Reactive_Manifesto.tex) |
-| 7 | Domain-Driven Design Reference | Eric Evans | 12/04/2026 | [PDF](Artigo_7_DDD_Reference.pdf) · [TEX](Artigo_7_DDD_Reference.tex) |
-| 8 | Managing Technical Debt | Steve McConnell | 19/04/2026 | [PDF](Artigo_8_Managing_Technical_Debt.pdf) · [TEX](Artigo_8_Managing_Technical_Debt.tex) |
-| 9 | Hotspot Patterns | — | 23/04/2026 | [PDF](Artigo_9_Hotspot_Patterns.pdf) · [TEX](Artigo_9_Hotspot_Patterns.tex) |
-| 10 | Parallel Changes in Large-Scale Software Development | — | 23/04/2026 | [PDF](Artigo_10_Parallel_Changes.pdf) · [TEX](Artigo_10_Parallel_Changes.tex) |
-| 11 | The C4 Model for Visualising Software Architecture | Simon Brown | 23/04/2026 | [PDF](Artigo_11_C4_Model.pdf) · [TEX](Artigo_11_C4_Model.tex) |
-| 12 | Geração de Código DSL para Diagramas C4 Model via LLMs | — | 23/04/2026 | [PDF](Artigo_12_Geracao_Codigo_DSL_C4_LLMs.pdf) · [TEX](Artigo_12_Geracao_Codigo_DSL_C4_LLMs.tex) |
-| 13 | Object Constraint Language: A Definitive Guide | OMG | 23/04/2026 | [PDF](Artigo_13_OCL.pdf) · [TEX](Artigo_13_OCL.tex) |
-| 14 | Architectural Styles and the Design of Network-based Software Architectures | Roy T. Fielding | 23/04/2026 | [PDF](Artigo_14_Fielding_REST.pdf) · [TEX](Artigo_14_Fielding_REST.tex) |
-| 15 | DevSkiller Future Skills Report 2025 | DevSkiller | 23/04/2026 | [PDF](Artigo_15_DevSkiller.pdf) · [TEX](Artigo_15_DevSkiller.tex) |
-| 16 | ThoughtWorks Technology Radar — Vol. 32 | ThoughtWorks | 23/04/2026 | [PDF](Artigo_16_ThoughtWorks_Radar.pdf) · [TEX](Artigo_16_ThoughtWorks_Radar.tex) |
+| # | Artigo | Autor(es) | Data | PDF Original | Resenha |
+|:-:|--------|-----------|:----:|:------------:|:-------:|
+| 1 | The Big Ball of Mud | Foote & Yoder | 01/03/2026 | [artigo](artigos/The-Big-Ball-of-Mud.pdf) | [PDF](pdf/Artigo_1_Big_Ball_of_Mud.pdf) |
+| 2 | On the Criteria to Be Used in Decomposing Systems into Modules | David L. Parnas | 08/03/2026 | [artigo](artigos/Criteria-for-Modularization.pdf) | [PDF](pdf/Artigo_2_Criteria_Modularization.pdf) · [TEX](tex/Artigo_2_Criteria_Modularization.tex) |
+| 3 | No Silver Bullet — Essence and Accidents of Software Engineering | Frederick P. Brooks Jr. | 15/03/2026 | [artigo](artigos/No-Silver-Bullet-Essence-and-Accidents-of-Software-Engineering.pdf) | [PDF](pdf/Artigo_3_No_Silver_Bullet.pdf) |
+| 4 | Design by Contract | Bertrand Meyer | 22/03/2026 | [artigo](artigos/Design-by-Contract.pdf) | [PDF](pdf/Artigo_4_Design_by_Contract.pdf) · [TEX](tex/Artigo_4_Design_by_Contract.tex) |
+| 5 | Software Architecture: A Roadmap | David Garlan | 29/03/2026 | [artigo](artigos/Software-Architecture-A-Roadmap.pdf) | [PDF](pdf/Artigo_5_Software_Architecture_Roadmap.pdf) · [TEX](tex/Artigo_5_Software_Architecture_Roadmap.tex) |
+| 6 | The Reactive Manifesto 2.0 | Bonér, Farley, Kuhn, Thompson | 05/04/2026 | [artigo](artigos/The-Reactive-Manifesto-2.0.pdf) | [PDF](pdf/Artigo_6_Reactive_Manifesto.pdf) · [TEX](tex/Artigo_6_Reactive_Manifesto.tex) |
+| 7 | Domain-Driven Design Reference | Eric Evans | 12/04/2026 | [artigo](artigos/DDD_Reference_2015-03.pdf) | [PDF](pdf/Artigo_7_DDD_Reference.pdf) · [TEX](tex/Artigo_7_DDD_Reference.tex) |
+| 8 | Managing Technical Debt | Steve McConnell | 19/04/2026 | [artigo](artigos/Managing-Technical-Debt.pdf) | [PDF](pdf/Artigo_8_Managing_Technical_Debt.pdf) · [TEX](tex/Artigo_8_Managing_Technical_Debt.tex) |
+| 9 | Hotspot Patterns | — | 23/04/2026 | [artigo](artigos/Hotspot-Patterns.pdf) | [PDF](pdf/Artigo_9_Hotspot_Patterns.pdf) · [TEX](tex/Artigo_9_Hotspot_Patterns.tex) |
+| 10 | Parallel Changes in Large-Scale Software Development | — | 23/04/2026 | [artigo](artigos/Parallel-Changes-in-Large-Scale-Software-Development.pdf) | [PDF](pdf/Artigo_10_Parallel_Changes.pdf) · [TEX](tex/Artigo_10_Parallel_Changes.tex) |
+| 11 | The C4 Model for Visualising Software Architecture | Simon Brown | 23/04/2026 | [artigo](artigos/The-C4-Model-for-Visualising-Software-Architecture.pdf) | [PDF](pdf/Artigo_11_C4_Model.pdf) · [TEX](tex/Artigo_11_C4_Model.tex) |
+| 12 | Geração de Código DSL para Diagramas C4 Model via LLMs | — | 23/04/2026 | [artigo](artigos/Geração-de-Código-DSL-para-Diagramas-C4-Model-via-LLMs.pdf) | [PDF](pdf/Artigo_12_Geracao_Codigo_DSL_C4_LLMs.pdf) · [TEX](tex/Artigo_12_Geracao_Codigo_DSL_C4_LLMs.tex) |
+| 13 | Object Constraint Language: A Definitive Guide | OMG | 23/04/2026 | [artigo](artigos/Object-Constraint-Language-a-Definitive-Guide.pdf) | [PDF](pdf/Artigo_13_OCL.pdf) · [TEX](tex/Artigo_13_OCL.tex) |
+| 14 | Architectural Styles and the Design of Network-based Software Architectures | Roy T. Fielding | 23/04/2026 | [artigo](artigos/Fielding-Dissertation.pdf) | [PDF](pdf/Artigo_14_Fielding_REST.pdf) · [TEX](tex/Artigo_14_Fielding_REST.tex) |
+| 15 | DevSkiller Future Skills Report 2025 | DevSkiller | 23/04/2026 | [artigo](artigos/DevSkiller-Future-Skills-Report-2025.pdf) | [PDF](pdf/Artigo_15_DevSkiller.pdf) · [TEX](tex/Artigo_15_DevSkiller.tex) |
+| 16 | ThoughtWorks Technology Radar — Vol. 32 | ThoughtWorks | 23/04/2026 | [artigo](artigos/Thoughtworks-Technology-Radar-vol-32-pt.pdf) | [PDF](pdf/Artigo_16_ThoughtWorks_Radar.pdf) · [TEX](tex/Artigo_16_ThoughtWorks_Radar.tex) |
 
 ---
 
@@ -85,15 +85,19 @@ As resenhas foram produzidas ao longo do semestre letivo de **2026/1**, cobrindo
 
 ```
 resenhas-artigos/
-├── Artigo_1_Big_Ball_of_Mud.pdf
-├── Artigo_2_Criteria_Modularization.tex
-├── Artigo_2_Criteria_Modularization.pdf
-├── Artigo_3_No_Silver_Bullet.pdf
-├── Artigo_4_Design_by_Contract.tex
-├── Artigo_4_Design_by_Contract.pdf
-├── ...
-├── Artigo_16_ThoughtWorks_Radar.tex
-└── Artigo_16_ThoughtWorks_Radar.pdf
+├── artigos/          # PDFs originais dos artigos lidos
+│   ├── The-Big-Ball-of-Mud.pdf
+│   ├── Criteria-for-Modularization.pdf
+│   └── ...
+├── tex/              # Código-fonte LaTeX das resenhas
+│   ├── Artigo_2_Criteria_Modularization.tex
+│   ├── Artigo_4_Design_by_Contract.tex
+│   └── ...
+├── pdf/              # Resenhas compiladas em PDF
+│   ├── Artigo_1_Big_Ball_of_Mud.pdf
+│   ├── Artigo_2_Criteria_Modularization.pdf
+│   └── ...
+└── README.md
 ```
 
 ---
@@ -134,17 +138,17 @@ brew install tectonic   # macOS
 # ou: cargo install tectonic
 
 # Compilar um arquivo
-tectonic Artigo_2_Criteria_Modularization.tex
+tectonic tex/Artigo_2_Criteria_Modularization.tex
 
 # Compilar todos de uma vez
-for f in *.tex; do tectonic "$f"; done
+for f in tex/*.tex; do tectonic "$f"; done
 ```
 
 ### Opção 2 — Overleaf (online)
 
 1. Acesse [overleaf.com](https://www.overleaf.com)
 2. Crie um novo projeto em branco
-3. Cole o conteúdo do arquivo `.tex`
+3. Cole o conteúdo do arquivo `.tex` desejado
 4. Compile e baixe o PDF
 
 ---
