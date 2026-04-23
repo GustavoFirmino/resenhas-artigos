@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Resenha Cr\'itica: Artigo 11 ---\\
+The C4 Model for Visualising Software Architecture}
+\author{Gustavo Pessoa Firmino Duarte}
+\date{23 de Abril de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introdu\c{c}\~ao}
+
+O modelo C4 (\textit{Context, Containers, Components, Code}), criado por Simon
+Brown, \'e uma abordagem leve e pragm\'atica para a documenta\c{c}\~ao e visualiza\c{c}\~ao
+de arquiteturas de software. Diferentemente de nota\c{c}\~oes mais pesadas como
+o UML completo ou o TOGAF, o C4 prop\~oe uma hierarquia de quatro n\'iveis de
+abstra\c{c}\~ao, cada um direcionado a uma audi\^encia espec\'ifica: do diagrama
+de contexto de alto n\'ivel, compreens\'ivel por stakeholders n\~ao t\'ecnicos,
+at\'e os diagramas de c\'odigo de baixo n\'ivel, \'uteis para desenvolvedores
+trabalhando na implementa\c{c}\~ao. O artigo de Brown sistematiza essa abordagem
+e argumenta que a aus\^encia de documenta\c{c}\~ao arquitetural acess\'ivel \'e
+uma das principais causas de decis\~oes equivocadas e dificuldades de comunica\c{c}\~ao
+em equipes de desenvolvimento.
+
+\section{Os Quatro N\'iveis de Abstra\c{c}\~ao}
+
+O primeiro n\'ivel, o \textbf{Diagrama de Contexto} (\textit{System Context
+Diagram}), mostra o sistema sendo constru\'ido e suas rela\c{c}\~oes com usu\'arios
+e outros sistemas externos. \'E intencionalmente simples e pode ser apresentado
+a qualquer stakeholder, t\'ecnico ou n\~ao, para estabelecer o escopo e as
+fronteiras do sistema.
+
+O segundo n\'ivel, o \textbf{Diagrama de Cont\^eineres} (\textit{Container
+Diagram}), detalha as aplica\c{c}\~oes e armazenamentos de dados que comp\~oe o
+sistema --- cada cont\^einer \'e uma unidade implantat\'ivel independentemente
+(como uma aplica\c{c}\~ao web, uma API, um banco de dados ou uma fila de mensagens).
+Esse diagrama \'e voltado a desenvolvedores e arquitetos e responde \`a pergunta:
+``Como o sistema \'e dividido em blocos implant\'aveis?''
+
+O terceiro n\'ivel, o \textbf{Diagrama de Componentes} (\textit{Component
+Diagram}), detalha os componentes internos de um cont\^einer --- as unidades
+l\'ogicas principais como controladores, servi\c{c}os e reposit\'orios. O quarto
+n\'ivel, o \textbf{Diagrama de C\'odigo}, \'e opcional e mapeia a implementa\c{c}\~ao
+em classes e interfaces, frequentemente gerado automaticamente por ferramentas
+de análise est\'atica.
+
+Brown enfatiza que o valor do C4 est\'a na consist\^encia e na legibilidade:
+cada diagrama deve ser autoexplicativo, com elementos claramente rotulados quanto
+a seus tipos, tecnologias e responsabilidades, sem depend\^encia de uma leg\'enda
+externa. A \textit{ubiquidade} dos diagramas --- publicados em wikis, README,
+conversas de onboarding --- \'e t\~ao importante quanto sua precis\~ao.
+
+\section{Conex\~ao com a Pr\'atica Profissional}
+
+A leitura do modelo C4 resolveu uma tens\~ao que havia sentido sem conseguir
+articular: a dificuldade de saber \textit{qual n\'ivel de detalhe} usar ao
+documentar uma arquitetura. No meu MVP de e-commerce, quando precisei explicar
+o sistema para o professor orientador, acabei criando um diagrama informal que
+misturava o n\'ivel de cont\^eineres (Node.js + SQLite + React) com detalhes de
+componentes internos (rotas, servi\c{c}os, modelos Prisma). O resultado foi um
+diagrama confuso que tentava dizer tudo ao mesmo tempo para audi\^encias diferentes.
+
+Com o modelo C4, o diagrama correto para essa apresenta\c{c}\~ao seria o
+\textit{Container Diagram}: React SPA $\to$ API Node.js/Express $\to$ SQLite via
+Prisma. Simples, claro, sem detalhes de implementa\c{c}\~ao. Para a equipe de
+desenvolvimento (eu mesmo), um \textit{Component Diagram} detalhando rotas,
+middlewares e servi\c{c}os seria o mais \'util.
+
+Na ArcelorMittal, a aus\^encia de diagramas C4 (ou qualquer documenta\c{c}\~ao
+arquitetural estruturada) tornava o onboarding de novos membros do time de suporte
+extremamente dependente do conhecimento t\'acito de pessoas espec\'ificas.
+
+\section{Conclus\~ao}
+
+O modelo C4 de Simon Brown \'e um exemplo raro de abordagem que \'e ao mesmo tempo
+simples de aprender, \'util na pr\'atica e suficientemente flex\'ivel para
+sistemas de qualquer escala. Sua maior contribui\c{c}\~ao \'e resolver o problema
+de audi\^encia: ao definir explicitamente para quem cada n\'ivel de diagrama \'e
+dirigido, o C4 elimina a tens\~ao entre diagramas de alto n\'ivel que s\~ao
+abstratos demais para desenvolvedores e diagramas detalhados que s\~ao
+incompreens\'iveis para stakeholders. Para qualquer equipe que sinta que sua
+arquitetura est\'a mal documentada ou \'e dif\'icil de comunicar, o C4 \'e um
+ponto de partida acess\'ivel e imediatamente acion\'avel.
+
+\end{document}

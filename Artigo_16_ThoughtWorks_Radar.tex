@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Resenha Cr\'itica: Artigo 16 ---\\
+ThoughtWorks Technology Radar --- Vol.\ 32}
+\author{Gustavo Pessoa Firmino Duarte}
+\date{23 de Abril de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introdu\c{c}\~ao}
+
+O \textit{Technology Radar} da ThoughtWorks \'e uma publica\c{c}\~ao semestral
+que sintetiza a perspectiva coletiva dos especialistas da empresa sobre tend\^encias
+e mudan\c{c}as no mundo da tecnologia de software. O volume 32, publicado em
+portugu\^es, organiza as tecnologias em quatro quadrantes --- T\'ecnicas,
+Plataformas, Ferramentas e Linguagens \& Frameworks --- e as classifica em quatro
+an\'eis: \textit{Adote} (maturidade comprovada, recomenda\c{c}\~ao ativa),
+\textit{Experimente} (promissor, vale investigar), \textit{Avalie} (potencial,
+mas requer mais observa\c{c}\~ao) e \textit{Mantenha} (n\~ao adote sem raz\~ao
+espec\'ifica). O Radar n\~ao \'e um ranking ou uma lista de modismos: \'e uma
+destila\c{c}\~ao do julgamento pr\'atico de profissionais que aplicam essas
+tecnologias em projetos reais.
+
+\section{Destaques do Volume 32 e o M\'etodo do Radar}
+
+Entre os destaques t\'ecnicos do volume 32, a abordagem de \textit{platform
+engineering} --- a constru\c{c}\~ao de plataformas internas que abstraem
+complexidades de infraestrutura para os times de produto --- aparece fortemente
+posicionada no anel \textit{Adote}, refletindo a maturidade de uma tend\^encia
+que come\c{c}ou a surgir em volumes anteriores. A pr\'atica de \textit{architecture
+fitness functions}, derivada do livro \textit{Building Evolutionary Architectures}
+(Ford et al.), \'e destacada como uma forma de garantir que decis\~oes arquiteturais
+n\~ao sejam erodidas ao longo do tempo --- conectando-se diretamente \`a
+problem\'atica de d\'eriva arquitetural discutida no artigo de Garlan.
+
+No quadrante de Ferramentas, a consolida\c{c}\~ao de ferramentas de observabilidade
+(rastreamento distribu\'ido, m\'etricas e logs unificados) e o crescimento de
+plataformas de IA generativa como ferramentas de desenvolvimento aparecem como
+tend\^encias dominantes. O Radar tamb\'em registra esc\'epticismo em rela\c{c}\~ao
+a certas hypes: algumas ferramentas amplamente discutidas na comunidade aparecem
+no anel \textit{Mantenha} ou recebem ressalvas expl\'icitas, demonstrando o valor
+do julgamento cr\'itico que o Radar procura cultivar.
+
+O m\'etodo em si \'e instrutivo: o Radar \'e constru\'ido por meio de discuss\~oes
+coletivas entre centenas de consultores, buscando deliberadamente pontos de
+discord\^ancia e evitando o vi\'es de confirm\'acao de quem trabalha com uma
+tecnologia espec\'ifica. Esse processo reflete uma epistemologia madura sobre como
+avaliar tecnologias: n\~ao por popularidade ou marketing, mas por experi\^encia
+vivida em contextos variados.
+
+\section{Conex\~ao com a Pr\'atica Profissional}
+
+O ThoughtWorks Technology Radar \'e uma das fontes que utilizo regularmente para
+calibrar meu mapa mental do ecossistema tecnol\'ogico. Quando escolhi o \textit{stack}
+do meu MVP de e-commerce (Node.js, Prisma, React, SQLite), usei o Radar como uma
+das refer\^encias para avaliar a maturidade das ferramentas: Prisma estava no anel
+\textit{Adote} em volumes anteriores, o que me deu confian\c{c}a de que n\~ao estava
+apostando em uma ferramenta experimental.
+
+A discuss\~ao sobre \textit{platform engineering} ressoa com o que observei na
+ArcelorMittal: times de suporte a sistemas internacionais que gastavam parte
+significativa do tempo configurando ambientes e resolvendo problemas de infraestrutura
+que uma plataforma interna bem constru\'ida poderia ter absttra\'ido. A tend\^encia
+identificada pelo Radar reflete uma necessidade real que vi em primeira m\~ao.
+
+A pr\'atica de \textit{architecture fitness functions} tamb\'em me parece
+particularmente valiosa: a ideia de automatizar verifica\c{c}\~oes das propriedades
+arquiteturais --- como depend\^encias proibidas entre m\'odulos ou tamanhos m\'aximos
+de componentes --- \'e uma forma concreta de evitar a d\'eriva arquitetural que
+tanto o artigo de Garlan quanto a experi\^encia pr\'atica confirmam como inevit\'avel
+sem mecanismos de controle ativos.
+
+\section{Conclus\~ao}
+
+O \textit{Technology Radar} da ThoughtWorks \'e um artefato intelectualmente
+honesto em um campo frequentemente dominado por modismos e marketing. Seu valor
+reside menos nas tecnologias espec\'ificas que lista e mais no modelo de racioc\'inio
+que demonstra: como avaliar tecnologias com base em experi\^encia emp\'irica,
+contexto de aplica\c{c}\~ao e trade-offs expl\'icitos. Para um engenheiro de
+software em forma\c{c}\~ao, aprender a pensar \textit{como o Radar pensa} --- com
+cepticismo calibrado, baseado em evid\^encias e sens\'ivel ao contexto --- \'e
+possivelmente mais valioso do que qualquer item espec\'ifico que o Radar recomenda.
+
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Resenha Cr\'itica: Artigo 9 ---\\
+Hotspot Patterns}
+\author{Gustavo Pessoa Firmino Duarte}
+\date{23 de Abril de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introdu\c{c}\~ao}
+
+O conceito de \textit{hotspot patterns} emerge da interseção entre an\'alise de
+hist\'orico de vers\~oes e m\'etricas de complexidade de c\'odigo. Ao cruzar dados
+de frequência de altera\c{c}\~oes (extra\'idos de sistemas de controle de versão
+como Git) com medidas de complexidade estrutural (como a complexidade ciclom\'atica
+de McCabe), \'e poss\'ivel identificar componentes que s\~ao simultaneamente
+complexos e altamente modificados --- os chamados \textit{hotspots} do sistema.
+Esses pontos concentram o maior risco de defeitos e o maior custo de manuten\c{c}\~ao.
+A abordagem, popularizada por Adam Tornhill em seus trabalhos sobre an\'alise
+comportamental de c\'odigo, transforma o hist\'orico de commits de um reposit\'orio
+em uma ferramenta de diagn\'ostico arquitetural de grande valor pr\'atico.
+
+\section{Identifica\c{c}\~ao e Padr\~oes de Hotspots}
+
+Um \textit{hotspot} \'e definido pela combina\c{c}\~ao de dois fatores: alta
+complexidade interna e alta frequ\^encia de altera\c{c}\~ao. A raz\~ao de se
+combinar esses dois eixos \'e simples: um m\'odulo complexo que nunca muda n\~ao
+representa risco imediato, pois os desenvolvedores raramente precisam compreend\^e-lo
+ou modific\'a-lo. Da mesma forma, um arquivo simples que muda frequentemente
+(como um arquivo de configura\c{c}\~ao) tamb\'em n\~ao \'e preocupante. O perigo
+real est\'a nos arquivos que s\~ao ao mesmo tempo dif\'iceis de entender e
+frequentemente tocados pela equipe.
+
+Os padr\~oes que emergem dessa an\'alise incluem: \textbf{hotspots de superclasse}
+--- classes que atraem depend\^encias de grande parte do sistema e precisam mudar
+sempre que qualquer subdom\'inio evolui; \textbf{hotspots de coordena\c{c}\~ao}
+--- m\'odulos modificados simultaneamente por m\'ultiplos desenvolvedores, indicando
+acoplamento impl\'icito; e \textbf{hotspots de ciclo de vida} --- componentes que
+surgem como hotspots em cada nova fase do produto, sinalizando que a estrutura
+arquitetural n\~ao acompanhou o crescimento do sistema.
+
+A an\'alise de acoplamento temporal (\textit{temporal coupling}) \'e especialmente
+reveladora: quando dois arquivos s\~ao alterados juntos consistentemente em commits
+distintos, h\'a um acoplamento impl\'icito entre eles que n\~ao aparece na an\'alise
+est\'atica do c\'odigo. Esse padr\~ao frequentemente indica que uma abstra\c{c}\~ao
+est\'a faltando ou que uma fronteira arquitetural foi tra\c{c}ada incorretamente.
+
+\section{Conex\~ao com a Pr\'atica Profissional}
+
+A ideia de usar o hist\'orico de commits como fonte de informa\c{c}\~ao
+arquitetural \'e algo que nunca havia considerado antes de estudar esse tema. No
+meu MVP de e-commerce, o reposit\'orio Git registrou fiel\-mente os pontos de
+maior turbul\^encia: o arquivo de rotas principal e o servi\c{c}o de produtos
+foram modificados em quase todos os commits, enquanto utilit\'arios e componentes
+de UI menores permaneceram est\'aveis. Retrospectivamente, esse \'e um sinal
+cl\'assico de que o servi\c{c}o de produtos acumulava muitas responsabilidades
+--- era simultaneamente o ponto de acesso ao banco de dados, o lugar de transforma\c{c}\~ao
+de dados e o ponto de orquestra\c{c}\~ao de regras de neg\'ocio.
+
+Na ArcelorMittal, os sistemas legados mais cr\'iticos do suporte eram exatamente
+aqueles que, intuitivamente, a equipe sabia serem os mais ``perigosos'' de tocar.
+A abordagem de hotspot patterns oferece uma forma objetiva e mensur\'avel de
+confirmar essa intui\c{c}\~ao e de priorizar refatora\c{c}\~oes com base em
+evid\^encias quantitativas em vez de opini\~oes subjetivas.
+
+\section{Conclus\~ao}
+
+A metodologia de an\'alise de hotspot patterns representa uma ponte valiosa entre
+a teoria de arquitetura de software e a realidade empírica dos reposit\'orios de
+c\'odigo. Ao usar dados concretos de hist\'orico de vers\~oes, ela torna o
+diagn\'ostico arquitetural acess\'ivel a equipes que n\~ao t\^em tempo ou recursos
+para an\'alises formais extensas. Al\'em disso, ao revelar acoplamentos impl\'icitos
+e pontos de risco concentrado, a abordagem orienta investimentos de refatora\c{c}\~ao
+onde o retorno \'e maior. Em um cen\'ario em que d\'ivida t\'ecnica acumulada
+torna sistemas cada vez mais custosos de manter, a capacidade de identificar
+objetivamente os piores hotspots \'e uma vantagem competitiva real para equipes
+de engenharia.
+
+\end{document}

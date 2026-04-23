@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Resenha Cr\'itica: Artigo 13 ---\\
+Object Constraint Language: A Definitive Guide}
+\author{Gustavo Pessoa Firmino Duarte}
+\date{23 de Abril de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introdu\c{c}\~ao}
+
+A \textit{Object Constraint Language} (OCL) \'e uma linguagem formal de especifica\c{c}\~ao
+padronizada pelo \textit{Object Management Group} (OMG) como complemento ao UML
+(\textit{Unified Modeling Language}). O guia definitivo da OCL apresenta a linguagem
+como uma forma precisa e n\~ao-ambigu\'ia de expressar restri\c{c}\~oes sobre
+modelos UML --- restri\c{c}\~oes que n\~ao podem ser expressas adequadamente
+atrav\'es de diagramas gr\'aficos. Por meio de express\~oes OCL \'e poss\'ivel
+especificar invariantes de classe, pr\'e-condi\c{c}\~oes e p\'os-condi\c{c}\~oes
+de opera\c{c}\~oes (conectando-se diretamente ao \textit{Design by Contract} de
+Meyer), regras de deriva\c{c}\~ao de atributos e guardas de transi\c{c}\~oes de
+estados. A OCL \'e uma linguagem puramente declarativa e sem efeitos colaterais:
+avaliar uma express\~ao OCL nunca modifica o estado do sistema.
+
+\section{Sintaxe, Tipos e Principais Construtores}
+
+A OCL possui um sistema de tipos rico que inclui tipos b\'asicos (Boolean, Integer,
+Real, String), tipos de cole\c{c}\~ao (Set, OrderedSet, Bag, Sequence) e tipos
+definidos pelo modelo UML (as pr\'oprias classes do diagrama de classes). As
+express\~oes s\~ao escritas sobre o contexto de um elemento do modelo --- por
+exemplo, uma invariante \'e sempre associada a um contexto de classe.
+
+Um exemplo cl\'assico de invariante OCL \'e a restri\c{c}\~ao de que a idade de
+uma pessoa deve ser positiva: \texttt{context Pessoa inv: self.idade > 0}. Uma
+pr\'e-condi\c{c}\~ao em uma opera\c{c}\~ao de saque banc\'ario poderia ser:
+\texttt{context Conta::sacar(valor : Real) pre: valor > 0 and saldo >= valor}.
+
+As opera\c{c}\~oes sobre cole\c{c}\~oes s\~ao especialmente poderosas: \texttt{select},
+\texttt{reject}, \texttt{collect}, \texttt{forAll} e \texttt{exists} permitem
+expressar restri\c{c}\~oes complexas sobre conjuntos de objetos relacionados de
+forma concisa e leg\'ivel. Por exemplo, ``todos os funcion\'arios de um departamento
+devem ter sal\'ario maior que o sal\'ario m\'inimo'' se expressa naturalmente em
+OCL sem ambiguidade.
+
+A OCL tamb\'em suporta navega\c{c}\~ao atrav\'es de associa\c{c}\~oes UML,
+permitindo especificar restri\c{c}\~oes que envolvem m\'ultiplas classes relacionadas.
+Esse recurso \'e essencial para modelar regras de neg\'ocio que naturalmente
+atravessam fronteiras de objetos.
+
+\section{Conex\~ao com a Pr\'atica Profissional}
+
+A OCL representa o extremo formal do espectro de especifica\c{c}\~ao --- o oposto
+do c\'odigo informal que \'e a norma nos projetos em que participei. No meu MVP
+de e-commerce, as regras de neg\'ocio como ``um pedido n\~ao pode ser submetido
+com carrinho vazio'' ou ``o desconto n\~ao pode exceder 100\% do pre\c{c}o'' foram
+implementadas diretamente no c\'odigo de servi\c{c}o, sem especifica\c{c}\~ao
+formal pr\'evia. A OCL seria a linguagem adequada para capturar essas regras de
+forma inequ\'ivoca antes da implementa\c{c}\~ao.
+
+Conectando com minha leitura do \textit{Design by Contract} de Meyer, percebo
+que a OCL \'e essencialmente uma implementa\c{c}\~ao formal do DbC no universo
+de modelagem UML: pr\'e-condi\c{c}\~oes, p\'os-condi\c{c}\~oes e invariantes
+t\^em mapeamento direto. A diferen\c{c}a \'e que a OCL opera sobre modelos,
+enquanto o DbC de Meyer opera diretamente no c\'odigo Eiffel. Em ambientes onde
+a modelagem UML \'e parte central do processo de desenvolvimento (como em alguns
+contextos de engenharia de sistemas ou conformidade regulat\'oria), a OCL \'e
+insubstitu\'ivel como ferramenta de especifica\c{c}\~ao.
+
+\section{Conclus\~ao}
+
+A OCL representa um marco na especifica\c{c}\~ao formal de software orientado a
+objetos. Sua integra\c{c}\~ao com UML permite que modelos de an\'alise sejam
+enriquecidos com restri\c{c}\~oes precisas, reduzindo a ambiguidade que frequentemente
+leva a implementa\c{c}\~oes incorretas. Embora seu uso na ind\'ustria seja limitado
+--- a maioria das equipes prefere express\~oes impl\'icitas no c\'odigo ou em
+linguagem natural --- a OCL permanece relevante em dom\'inios de alta criticidade,
+como sistemas m\'edicos, financeiros e aeroespaciais, onde a especifica\c{c}\~ao
+formal \'e uma exig\^encia de conformidade. O estudo da OCL tamb\'em tem valor
+pedag\'ogico: for\c{c}a o desenvolvedor a pensar com rigor l\'ogico sobre as
+propriedades que o sistema deve satisfazer, uma habilidade transfer\'ivel para
+qualquer contexto de desenvolvimento.
+
+\end{document}
